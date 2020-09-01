@@ -1,0 +1,25 @@
+/* Universal Selector */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* we use 10px so we know 1 rem = 10 pixels */
+/* we use rem so we can change font when device window size/font changes (mobile device) */
+/* setting pixels here is bad practice because visually impaired people could not make their font larger!
+presuming 16px is DEFAULT - we calculate 62.5% of browser default */
+html {
+  /* this defines 1 rem == 10px (presuming 16px is default browser setting) */
+  font-size: 62.5%;
+}
+
+/* Use inheritance
+  all child elements of body will inherit from body
+  this is more efficient than doing it in the universal selector!
+*/
+body {
+  box-sizing: border-box;
+}
