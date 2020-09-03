@@ -7,13 +7,29 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
   transition: transform .3s;
 
+  @include respond(tab-portrait) {
+    padding: 2rem;
+  }
+
   &__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    background-clip: text;
-    color: transparent;
+    // background-clip: text;
+    // color: transparent;
+    color: green;
+
+    // GRACEFUL DEGRADATION with @supports
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @include respond(tab-portrait) {
+      margin: 0;
+    }
   }
 
   &:hover {

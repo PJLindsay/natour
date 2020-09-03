@@ -10,6 +10,13 @@
   visibility: hidden;
   transition: all .3;
 
+  // GRACEFUL degradation with @supports media query (does it support a browser capability)
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px); // in case browser does not support
+    backdrop-filter: blur(10px); //only worked in Safari (not Chrome)
+    background-color: rgba($color-black, .3);
+  }
+
   &__content {
     @include absCenter;
 
