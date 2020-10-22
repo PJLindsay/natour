@@ -1,6 +1,6 @@
 # natour project
 
-Advanced CSS Course Project
+Advanced CSS Course Project: Fictional Travel / Guided Tours website
 
 Website built with Sassy CSS (scss)
 
@@ -8,13 +8,6 @@ Website built with Sassy CSS (scss)
 - shows lots of tricks such as checkbox hack (click event)
 - responsive design
 - desktop-first (started w/ desktop first)
-
-
-NOTE: to have your css respond to changes you need to have a terminal open and running "live-server"
-
-## Synopsis
-
-Fictional Travel / Guided Tours website
 
 ## Install
 
